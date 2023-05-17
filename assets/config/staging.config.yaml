@@ -1,0 +1,28 @@
+app:
+  name: "MFAF"
+  component-name: "resource.domain-service"
+  description: "[Example] management"
+  version: "1.0"
+
+log:
+  level: "silly"
+
+nanoid:
+  alphanum: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+  len: 11
+
+kafka:
+  client:
+    client-id: 'resource.domain-service'
+    ssl: true
+  consumer:
+    group-id: 'resource.domain-service-0'
+    allowAutoTopicCreation: true    
+
+api-services:
+  examples:
+    list-example:
+      url: https://webhook.site/658d7ea4-5d71-45fd-b03f-918d017a8ca8
+      method: "POST"
+      timeout: 5000
+      reject-unauthorized: false
